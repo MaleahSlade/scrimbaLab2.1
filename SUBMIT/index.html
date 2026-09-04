@@ -24,20 +24,22 @@
             <!-- Form section -->
             <div class="contact-form-section">
                 <fieldset>
-                <form>
+                <form aria-labelledby="contact-heading">
                     <h1 class="contact-form-heading">Reach <span>Out</span></h1>
                     <h2 class="contact-form-intro">Curious about something? Complete these fields and "get in touch", as you humans say. 🤙</h2>
                     
-                    <label for="name-firstlast">Name</label>
-                    <input id="name-firstlast" class="contact-input" type="text" placeholder="Jane Doe" />
+                    <label for="name-firstlast" aria-autocomplete="inline">Name</label>
+                    <input id="name-firstlast" class="contact-input" type="text" placeholder="Jane Doe" autocomplete="name" required/>
                     
                     <label for="email-address">Email</label>
-                    <input id="email-address" class="contact-input" type="text" placeholder="jane.doe@gmail.com" />
+                    <input id="email-address" class="contact-input" type="text" placeholder="jane.doe@gmail.com" autocomplete="email" required/>
                     
-                     <label for="written-message">Write a Messsage</label>
-                    <textarea id="written-message" class="contact-textarea" rows="4" cols="50" placeholder="Hello, I would like to learn more!"></textarea>
+                    <label for="written-message">Write a Messsage</label>
+                    <textarea id="written-message" class="contact-textarea" rows="4" cols="50" placeholder="Hello, I would like to learn more!" required></textarea>
 
+                    
                     <button class="contact-submit-button" type="button" onclick="submitForm()">Submit Message</button>
+                    <div id="form-status" aria-live="polite"></div>
                 </form>
                 </fieldset>
 
