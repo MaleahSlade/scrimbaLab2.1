@@ -1,3 +1,4 @@
+cat > SUBMIT/styles.css << 'EOF'cat > SUBMIT/styles.css << 'EOF'
 html, body {
     margin: 0;
     padding: 0;
@@ -45,12 +46,20 @@ body, .contact-input, .contact-textarea  {
     font-size: 1rem;
     border: 2px solid #333333;
 }
+.contact-input:focus-visible {
+    outline: 3px solid #007000;
+    outline-offset: 2px;
+}
 .contact-textarea {
     max-width: 300px;
     margin: 5px auto 15px;
     padding: 16px 20px;
     border: 2px solid #333333;
     border-radius: 20px;
+}
+.contact-textarea:focus-visible {
+    outline: 3px solid #007000;
+    outline-offset: 2px;
 }
 .contact-input::-webkit-input-placeholder, .contact-textarea::-webkit-input-placeholder {
     color:black;
@@ -67,7 +76,10 @@ body, .contact-input, .contact-textarea  {
 .contact-submit-button:hover {
     background-color: #dddddd;
 }
-
+.contact-submit-button:focus-visible {
+    outline: 3px solid #007000;
+    outline-offset: 2px;
+}
 /* 
 Current issues:
 - Placeholder text has poor text contrast.// done
@@ -76,6 +88,5 @@ Current issues:
 - Ambiguous button text.// done
 - Semantic HTML is lacking.// done
 - Font-sizes are defined in px.// done
-
 Your final challenge: Use your new superpower to make our contact page accessible!🦸
 */
